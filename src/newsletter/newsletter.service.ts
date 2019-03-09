@@ -17,7 +17,7 @@ export class NewsletterService {
     }
 
     async findAByEmail(email: string): Promise<Subscription> {
-        return await this.repository.findOne({ where: { email : email }});
+        return await this.repository.findOne({ email : email });
     }
 
     async create(subscription: Subscription): Promise<Subscription> {
